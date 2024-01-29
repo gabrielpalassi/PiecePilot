@@ -1,0 +1,14 @@
+{
+  "price": 20.0,
+  "rams": null,
+  "motherBoard": null,
+  "hdds": null,
+  "name": null,
+  "cpu": {
+    "name": "Intel Core i9-11900K",
+    "description": "Powerful CPU for high-performance computing. Ideal for gaming and demanding tasks.",
+    "price": 549.99,
+    "image": "https://images.kabum.com.br/produtos/fotos/113000/processador-intel-core-i9-10900k-cache-20mb-3-7ghz-5-3ghz-max-turbo-lga-1200-bx8070110900k_1637699992_original.jpg",
+    "socket": "LGA1200"
+  }
+}

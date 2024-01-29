@@ -1,0 +1,11 @@
+@import '../../styles/colors.scss';
+
+.highlights-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .highlights-container{
+        width: 960px;
+    }
+}

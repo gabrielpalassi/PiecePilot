@@ -1,0 +1,20 @@
+{
+  "price": 20.0,
+  "rams": null,
+  "motherBoard": {
+    "name": "MSI MPG B550 Gaming Edge WiFi",
+    "description": "A reliable motherboard with built-in WiFi and robust power delivery. Compatible with AMD Ryzen processors.",
+    "price": 189.99,
+    "image": "https://m.media-amazon.com/images/I/91+9A+caZ6L._AC_UF894,1000_QL80_.jpg",
+    "ramType": "DDR4",
+    "ramSlots": 4,
+    "hddConnection": [
+      "PCIe4",
+      "SATAIII"
+    ],
+    "socket": "AM4"
+  },
+  "hdds": null,
+  "name": null,
+  "cpu": null
+}

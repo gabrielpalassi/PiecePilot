@@ -1,0 +1,16 @@
+{
+  "price": 0.0,
+  "rams": null,
+  "motherBoard": null,
+  "hdds": [
+    {
+      "name": "Samsung 970 EVO Plus 1TB NVMe M.2 Internal SSD",
+      "description": "High-speed NVMe SSD for faster data access and improved system performance. Ideal for gaming and content creation.",
+      "price": 149.99,
+      "image": "https://image-us.samsung.com/SamsungUS/home/computing/memory-and-monitors/9-27-21/mz-v7s1t0b-am-gallery/MZ-V7S1T0BW_004.jpg?$product-details-jpg$",
+      "hddConnection": "NVMe"
+    }
+  ],
+  "name": null,
+  "cpu": null
+}

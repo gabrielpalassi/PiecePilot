@@ -1,0 +1,57 @@
+@import './styles/colors.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $black;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $light-grey;
+  border-radius: 5px;
+  border: 2px solid $white;
+}
+
+* {
+  scrollbar-color: $light-grey $white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+main {
+  padding: 50px 14vw 100px 14vw;
+
+  section {
+    margin-top: 50px;
+
+    &.small-margin {
+      margin-top: 30px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}

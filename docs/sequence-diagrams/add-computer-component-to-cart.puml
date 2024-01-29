@@ -1,0 +1,39 @@
+@startuml sequence-diagram
+skinparam style strictuml
+title Add Computer Components to Cart
+
+actor SellerActor as SellerActor
+participant "Screen" as Screen
+participant "CartController" as CartController
+participant "ComponentsController" as ComponentsController
+participant "ComponentsRepository" as ComponentsRepository
+participant "Cart" as Cart
+
+SellerActor -> Screen: Enter "Peças avulsas" Screen  
+activate Screen
+Screen -> ComponentsController: getAllComponents()
+activate ComponentsController
+ComponentsController -> ComponentsRepository: getComponents()
+activate ComponentsRepository
+ComponentsRepository --> ComponentsController  
+deactivate ComponentsRepository
+ComponentsController --> Screen : components
+deactivate ComponentsController
+Screen --> SellerActor : components
+deactivate Screen
+SellerActor -> Screen : Add Component to cart
+activate Screen
+Screen -> CartController : AddToCart(product, sellerId)
+activate CartController
+CartController -> Cart : getCart(sellerId)
+activate Cart
+Cart --> CartController : Cart
+deactivate Cart
+CartController -> Cart : addToCart(product)
+activate Cart
+Cart --> CartController
+deactivate Cart
+CartController --> Screen:
+deactivate CartController
+Screen --> SellerActor: Added to Cart
+deactivate Screen

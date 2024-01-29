@@ -1,0 +1,59 @@
+{
+    "productId": "",
+    "name": "",
+    "price": "",
+    "image": "",
+    "description": "",
+    "motherBoard": {
+        "productId": "1ced12df-4ab6-4116-a23d-7712dea65675",
+        "name": "MSI MPG B550 Gaming Edge WiFi",
+        "description": "A reliable motherboard with built-in WiFi and robust power delivery. Compatible with AMD Ryzen processors.",
+        "price": 189.99,
+        "image": "https://m.media-amazon.com/images/I/91+9A+caZ6L._AC_UF894,1000_QL80_.jpg",
+        "ramType": "DDR4",
+        "ramSlots": 4,
+        "hddConnection": [
+            "PCIe4",
+            "SATAIII"
+        ],
+        "socket": "AM4"
+    },
+    "cpu": {
+        "productId": "59fbd03b-2897-4451-9a5c-6c353abfa622",
+        "name": "AMD Ryzen 7 5800X",
+        "description": "A high-end CPU from AMD with excellent multi-core performance. Great for content creation and gaming.",
+        "price": 449.99,
+        "image": "https://m.media-amazon.com/images/I/61IIbwz-+ML._AC_UF894,1000_QL80_.jpg",
+        "socket": "AM4"
+    },
+    "rams": [
+        {
+            "productId": "fc29a2a4-e95b-4afc-90f0-fabd04b8ddf0",
+            "name": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200",
+            "price": 89.99,
+            "image": "https://images8.kabum.com.br/produtos/fotos/108438/memoria-corsair-vengeance-lpx-16gb-2x8gb-3200mhz-ddr4-cl16-preto-cmk16gx4m2b3200c16_1575299219_g.jpg",
+            "description": "High-performance RAM for gaming and multitasking. Features low-profile design and reliable Corsair quality.",
+            "ramType": "DDR4",
+            "sticksNumber": 2
+        },
+        {
+            "productId": "2eb41de3-5863-4761-a65f-28cf4a967a67",
+            "name": "G.Skill Ripjaws V Series 32GB (2 x 16GB) DDR4-3600",
+            "price": 159.99,
+            "image": "https://m.media-amazon.com/images/I/614uJf8wccL._AC_UF1000,1000_QL80_.jpg",
+            "description": "Large capacity RAM for content creation and professional applications. Offers fast data transfer rates.",
+            "ramType": "DDR4",
+            "sticksNumber": 2
+        }
+    ],
+    "hdds" : [
+        {
+            "productId": "bb0877e0-6b3f-425f-bf20-f9579938bb22",
+            "name": "Samsung 970 EVO Plus 1TB NVMe M.2 Internal SSD",
+            "description": "High-speed NVMe SSD for faster data access and improved system performance. Ideal for gaming and content creation.",
+            "price": 149.99,
+            "image": "https://image-us.samsung.com/SamsungUS/home/computing/memory-and-monitors/9-27-21/mz-v7s1t0b-am-gallery/MZ-V7S1T0BW_004.jpg?$product-details-jpg$",
+            "hddConnection": "NVMe"
+        }
+    ]
+}

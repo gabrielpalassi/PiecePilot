@@ -1,0 +1,23 @@
+{
+  "price": 20.0,
+  "rams": [
+    {
+      "name": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200",
+      "description": "High-performance RAM for gaming and multitasking. Features low-profile design and reliable Corsair quality.",
+      "price": 89.99,
+      "image": "https://images8.kabum.com.br/produtos/fotos/108438/memoria-corsair-vengeance-lpx-16gb-2x8gb-3200mhz-ddr4-cl16-preto-cmk16gx4m2b3200c16_1575299219_g.jpg",
+      "ramType": "DDR4",
+      "sticksNumber": 2
+    }
+  ],
+  "motherBoard": null,
+  "hdds": null,
+  "name": null,
+  "cpu": {
+    "name": "Intel Core i9-11900K",
+    "description": "Powerful CPU for high-performance computing. Ideal for gaming and demanding tasks.",
+    "price": 549.99,
+    "image": "https://images.kabum.com.br/produtos/fotos/113000/processador-intel-core-i9-10900k-cache-20mb-3-7ghz-5-3ghz-max-turbo-lga-1200-bx8070110900k_1637699992_original.jpg",
+    "socket": "LGA1200"
+  }
+}

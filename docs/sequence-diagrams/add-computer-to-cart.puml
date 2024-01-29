@@ -1,0 +1,85 @@
+@startuml sequence-diagram
+skinparam style strictuml
+title Add Computer to Cart Sequence
+
+actor SellerActor as SellerActor
+participant "Screen" as Screen
+participant "ComponentsController" as ComponentsController
+participant "ComputerBuilderController" as ComputerBuilderController
+participant "ComponentsRepository" as ComponentsRepository
+participant "CompatibilityService" as CompatibilityService
+participant "CartController" as CartController
+
+alt All Needed Parts Not Selected (!isComplete)?
+    SellerActor -> Screen: Enter "Montagem de Computadores" Screen
+    activate Screen
+    Screen -> ComponentsController: getAllComponents()
+    activate ComponentsController
+    ComponentsController -> ComponentsRepository: getComponents()
+    activate ComponentsRepository
+    ComponentsRepository --> ComponentsController  
+    deactivate ComponentsRepository
+    ComponentsController --> Screen : components
+    deactivate ComponentsController
+    Screen --> SellerActor : components
+    deactivate Screen
+    loop
+        SellerActor -> Screen: Select Component
+        activate Screen
+        Screen -> ComputerBuilderController: compatibleComponents(Computer)
+        activate ComputerBuilderController
+        ComputerBuilderController -> CompatibilityService: getCompaatibleCpus(Computer)
+        activate CompatibilityService
+        CompatibilityService -> ComponentsRepository : getCpus(socket)
+        activate ComponentsRepository
+        ComponentsRepository --> CompatibilityService
+        deactivate ComponentsRepository
+        CompatibilityService --> ComputerBuilderController : compatibleCpus
+        deactivate CompatibilityService
+        ComputerBuilderController -> CompatibilityService: getCompatibleHdds(Computer)
+        activate CompatibilityService
+        CompatibilityService -> ComponentsRepository : getHdds(hddConnections)
+        activate ComponentsRepository
+        ComponentsRepository --> CompatibilityService
+        deactivate ComponentsRepository
+        CompatibilityService --> ComputerBuilderController : compatibleHdds
+        deactivate CompatibilityService
+        ComputerBuilderController -> CompatibilityService: getCompatibleMotherBoards(Computer)
+        activate CompatibilityService
+        CompatibilityService -> ComponentsRepository : getMotherBoards(socket, hddConnections, ramType, ramSlots)
+        activate ComponentsRepository
+        ComponentsRepository --> CompatibilityService
+        deactivate ComponentsRepository
+        CompatibilityService --> ComputerBuilderController : compatibleMotherBoards
+        deactivate CompatibilityService
+        ComputerBuilderController -> CompatibilityService: getCompatibleRams(Computer)
+        activate CompatibilityService
+        CompatibilityService -> ComponentsRepository : getRams(RamType, MaxSticks)
+        activate ComponentsRepository
+        ComponentsRepository --> CompatibilityService
+        deactivate ComponentsRepository
+        CompatibilityService --> ComputerBuilderController : compatibleRams
+        deactivate CompatibilityService
+        ComputerBuilderController --> Screen : compatibleComponents
+        deactivate ComputerBuilderController
+        Screen --> SellerActor: compatibleComponents
+        deactivate Screen
+    end
+    else
+    SellerActor -> Screen: Add to Cart
+    activate Screen
+    Screen -> CartController : AddToCart(product, sellerId)
+    activate CartController
+    CartController -> Cart : getCart(sellerId)
+    activate Cart
+    Cart --> CartController : Cart
+    deactivate Cart
+    CartController -> Cart : addToCart(product)
+    activate Cart
+    Cart --> CartController
+    deactivate Cart
+    CartController --> Screen:
+    deactivate CartController
+    Screen --> SellerActor: Added to Cart
+    deactivate Screen
+    end

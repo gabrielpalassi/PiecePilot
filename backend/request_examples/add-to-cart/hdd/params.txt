@@ -1,0 +1,4 @@
+localhost:8080/api/add-to-cart?sellerId=e9982e27-dadb-4dfe-b1ff-ef874c70c699&clientCpf=51211435797
+
+sellerId=e9982e27-dadb-4dfe-b1ff-ef874c70c699
+clientCpf=51211435797

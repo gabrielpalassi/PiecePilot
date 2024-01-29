@@ -1,0 +1,36 @@
+@startuml complete-order
+skinparam style strictuml
+title Checkout
+
+actor Seller as Seller
+participant "Screen" as Screen
+participant "CartController" as CartController
+participant "Cart" as Cart
+participant "Order" as Order
+participant "OrdersRepository" as OrdersRepository 
+
+
+    Seller -> Screen: Enter "Carrinho" Screen
+    activate Screen
+    Screen -> CartController: checkout(sellerId)
+    activate CartController
+    CartController -> Cart : getCart(sellerId)
+    activate Cart
+    Cart --> CartController : cart
+    deactivate Cart
+    CartController -> Cart : getItems()
+    activate Cart
+    Cart --> CartController : items
+    deactivate Cart
+    create Order
+    CartController -> Order: new(items)
+    activate Order
+    Order --> CartController:
+    deactivate Order
+    CartController -> OrdersRepository : save(order)
+    activate OrdersRepository
+    OrdersRepository --> CartController
+    deactivate OrdersRepository
+    CartController  --> Screen
+    deactivate CartController
+    Screen --> Seller: Order Finished

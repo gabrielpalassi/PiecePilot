@@ -1,0 +1,106 @@
+@startuml total
+skinparam linetype ortho
+skinparam nodesep 50
+
+class Order {
+  - double price
+  - int id
+  - boolean status
+  + setItems()
+}
+
+class Seller {
+  - string name
+  - int id
+}
+
+class Client {
+  - string name
+  - int id
+}
+
+class Item {
+  - int quantity
+  - double price
+  + updatePrice()
+}
+
+class Product {
+  - string name
+  - double price
+  - string description
+  - string image
+}
+
+class Cart {
+  + addToCart()
+  + removeFromCart()
+  + freeCart()
+}
+
+together {
+class ComputerComponent {
+}
+
+class Computer {
+}
+}
+
+together {
+class Cpu {
+}
+
+class Ram {
+  - int sticksNumber
+}
+
+class Motherboard {
+  - ramSlots
+  - hddSlots
+}
+
+ class Hdd {
+    }
+
+}
+
+together {
+    enum Socket {
+    }
+
+    enum RamType {
+    }
+
+    enum HddConnection {
+    }
+}
+
+
+
+
+
+
+Order "1" *-- "1...*" Item : contains >
+Cart "1" o-- "1...*" Item : contains >
+Item "*" -- "1" Product : contains >
+Product <|-- ComputerComponent
+Product <|-- Computer
+ComputerComponent <|-- Cpu
+ComputerComponent <|-- Ram
+ComputerComponent <|-- Motherboard
+ComputerComponent <|-- Hdd
+Computer "*" -- "1" Cpu : contains >
+Computer "*" -- "1...*" Ram : contains >
+Computer "*" -- "1" Motherboard : contains >
+Computer "*" -- "1...*" Hdd : contains >
+Order "*" -- "1" Seller : makes <
+Order "*" -- "1" Client : has <
+Socket "1" -- "*" Cpu : has <
+Socket "1" -- "*" Motherboard : has <
+HddConnection "1...*" -- "*" Motherboard : has <
+HddConnection "1" -- "*" Hdd : has <
+RamType "1" -- "*" Ram : has <
+RamType "1" -- "*" Motherboard : has <
+
+
+@enduml

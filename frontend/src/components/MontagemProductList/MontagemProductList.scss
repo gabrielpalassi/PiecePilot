@@ -1,0 +1,42 @@
+.cards-arrows-container {
+    display: flex;
+
+    &.negative-margin {
+        margin: 0 -100px;
+    }
+
+    .arrow-container {
+        height: calc(14vw + 166px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .arrow {
+            cursor: pointer;
+            width: 50px;
+            opacity: 1;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+    
+            &.left {
+                margin-right: 50px;
+            }
+    
+            &.right {
+                margin-left: 50px;
+            }
+
+            &.disabled {
+                opacity: 0.3;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.fixed-height-div {
+    height: calc(14vw + 166px);
+}
