@@ -13,8 +13,6 @@ public class Seller {
     private String id;
     private String name;
     private String cpf;
-    private String email;
-    private String password;
     @OneToMany(mappedBy = "seller")
     private List<Order> orders;
 
@@ -31,21 +29,6 @@ public class Seller {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.cpf = cpf;
-    }
-
-    public Seller(String name, String cpf, String email) {
-        this.id = UUID.randomUUID().toString();
-        this.name = name;
-        this.cpf = cpf;
-        this.email = email;
-    }
-
-    public Seller(String name, String cpf, String email, String password) {
-        this.id = UUID.randomUUID().toString();
-        this.name = name;
-        this.cpf = cpf;
-        this.email = email;
-        this.password = password;
     }
 
     public String getId() {
@@ -75,17 +58,5 @@ public class Seller {
 
     public List<Order> getOrders() {
         return this.orders;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword(){
-        return this.password;
     }
 }

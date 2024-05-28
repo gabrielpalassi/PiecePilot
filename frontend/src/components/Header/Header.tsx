@@ -1,4 +1,3 @@
-import basePath from '../../constants/BasePath';
 import './Header.scss';
 import '../../styles/shared.scss';
 import { useLocation, Link } from 'react-router-dom';
@@ -10,28 +9,28 @@ import Badge from '@mui/material/Badge';
 function Header() {
   const location = useLocation();
   const cartItemsCounter = useContext(CartContext).cartItemsCounter;
-  const inicioIsActive: boolean = location.pathname === basePath;
-  const montagemIsActive: boolean = location.pathname === (basePath + '/montagem');
-  const pecasIsActive: boolean = location.pathname === (basePath + '/avulsas');
-  const gestaoIsActive: boolean = location.pathname === (basePath + '/gestao');
+  const inicioIsActive: boolean = location.pathname === '/';
+  const montagemIsActive: boolean = location.pathname === '/montagem';
+  const pecasIsActive: boolean = location.pathname === '/avulsas';
+  const gestaoIsActive: boolean = location.pathname === '/gestao';
 
   return (
     <header>
       <div className='header-container'>
         {/* Logo */}
-        <Link to={basePath}
+        <Link to={'/'}
           style={{ color: 'inherit', textDecoration: 'inherit', fontFamily: 'Montserrat', fontSize: '1.2rem', fontWeight: '500' }}>
           PiecePilot
         </Link>
         {/* Pages */}
         <nav className='links-container'>
-          <Link to={basePath} className={inicioIsActive ? 'active' : ''}>Início</Link>
-          <Link to={basePath + '/montagem'} className={montagemIsActive ? 'active' : ''}>Montagem de Computadores</Link>
-          <Link to={basePath + '/avulsas'} className={pecasIsActive ? 'active' : ''}>Peças Avulsas</Link>
-          <Link to={basePath + '/gestao'} className={gestaoIsActive ? 'active' : ''}>Gestão de Estoque</Link>
+          <Link to={'/'} className={inicioIsActive ? 'active' : ''}>Início</Link>
+          <Link to={'/montagem'} className={montagemIsActive ? 'active' : ''}>Montagem de Computadores</Link>
+          <Link to={'/avulsas'} className={pecasIsActive ? 'active' : ''}>Peças Avulsas</Link>
+          <Link to={'/gestao'} className={gestaoIsActive ? 'active' : ''}>Gestão de Estoque</Link>
         </nav>
         {/* Carrinho */}
-        <Link to={basePath + '/carrinho'} className='cart-button-wrapper'>
+        <Link to={'/carrinho'} className='cart-button-wrapper'>
           <Badge badgeContent={cartItemsCounter} color='primary' sx={{ fontSize: 18 }}>
             <ShoppingCartOutlinedIcon sx={{ fontSize: 18 }}></ShoppingCartOutlinedIcon>
           </Badge>

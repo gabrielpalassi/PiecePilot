@@ -1,5 +1,4 @@
 package br.com.piecepilot.backend.config;
-// import java.nio.charset.StandardCharsets;
 // import java.util.ArrayList;
 // import java.util.Arrays;
 // import java.util.List;
@@ -7,8 +6,6 @@ package br.com.piecepilot.backend.config;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-// import com.google.common.hash.Hashing;
 
 // import br.com.piecepilot.backend.entity.Client;
 // import br.com.piecepilot.backend.entity.Computer;
@@ -59,8 +56,8 @@ public class DataLoader {
 
             // // first sellers
             // List<Seller> sellers = new ArrayList<>();
-            // sellers.add(new Seller("Tarcisio", "112.994.351-90", "tarcisio@gmail.com", Hashing.sha256().hashString("123456", StandardCharsets.UTF_8).toString()));
-            // sellers.add(new Seller("Reginaldo", "777.714.357-91", "reginaldo@gmail.com", Hashing.sha256().hashString("123456", StandardCharsets.UTF_8).toString()));
+            // sellers.add(new Seller("Tarcisio", "112.994.351-90"));
+            // sellers.add(new Seller("Reginaldo", "777.714.357-91"));
             // for (int i = 0; i < sellers.size(); i++) {
             //     sellerRepository.save(sellers.get(i));
             // }

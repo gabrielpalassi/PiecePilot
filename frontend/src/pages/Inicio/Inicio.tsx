@@ -2,7 +2,6 @@ import './Inicio.scss';
 import BuildingImage from '../../assets/building.png';
 import SearchImage from '../../assets/search.png';
 import { Link } from 'react-router-dom';
-import basePath from '../../constants/BasePath';
 import ProductList from '../../components/ProductList/ProductList';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -29,7 +28,7 @@ function Inicio(): JSX.Element {
         <div className='text-div'>
           <div className='title'>Montagem fácil de computadores.</div>
           <div className='description'>Com um catálogo mutável, cálculo automático de preços e gestão de compatibilidade, o PiecePilot torna a montagem de PCs mais fácil e eficiente do que nunca.</div>
-          <Link to={basePath + '/montagem'}>
+          <Link to={'/montagem'}>
             <button>Monte um computador</button>
           </Link>
         </div>
@@ -47,7 +46,7 @@ function Inicio(): JSX.Element {
         <div className='text-div'>
           <div className='title'>Explore componentes diversos.</div>
           <div className='description'>O PiecePilot é o seu co-piloto na jornada de vendas. Explore seu catálogo de produtos, adicione peças avulsas ao carrinho e realize vendas dos mais diversos componentes.</div>
-          <Link to={basePath + '/avulsas'}>
+          <Link to={'/avulsas'}>
             <button>Explore peças avulsas</button>
           </Link>
         </div>

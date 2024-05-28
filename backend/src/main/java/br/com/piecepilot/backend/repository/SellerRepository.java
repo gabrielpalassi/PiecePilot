@@ -9,5 +9,5 @@ import br.com.piecepilot.backend.entity.Seller;
 public interface SellerRepository extends JpaRepository<Seller, Long> {
 
     Seller findById(String id);
-    Seller findByEmail(String email);
+    
 }

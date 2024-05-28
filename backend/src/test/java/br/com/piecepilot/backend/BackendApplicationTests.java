@@ -43,25 +43,25 @@ class BackendApplicationTests {
 
 	@Test
 	void addToCartTest() {
-		// Cart cart = Cart.getCartBySellerID("a");
+		Cart cart = Cart.getCartBySellerID("a");
 
-		// // Criando alguns produtos
-        // Product product1 = new Cpu("cpu1", 101.00, null, null, Socket.AM4);
-        // Product product2 = new Cpu("cpu1", 101.00, null, null, Socket.AM4);
-        // Product product3 = new Cpu("cpu2", 99.00, null, null, Socket.AM4);
-		// Product product4 = new Ram("ram1", 10.50, null, null, RamType.DDR3, 4);
-        // // Adicionando produtos à lista
-        // cart.addToCart(product1);
-        // cart.addToCart(product2);
-        // cart.addToCart(product3);
-		// cart.addToCart(product4);
-		// cart.addToCart(product4);
+		// Criando alguns produtos
+        Product product1 = new Cpu("cpu1", 101.00, null, null, Socket.AM4);
+        Product product2 = new Cpu("cpu1", 101.00, null, null, Socket.AM4);
+        Product product3 = new Cpu("cpu2", 99.00, null, null, Socket.AM4);
+		Product product4 = new Ram("ram1", 10.50, null, null, RamType.DDR3, 4);
+        // Adicionando produtos à lista
+        cart.addToCart(product1);
+        cart.addToCart(product2);
+        cart.addToCart(product3);
+		cart.addToCart(product4);
+		cart.addToCart(product4);
 
-		// cart.removeFromCart(product4);		
-		// cart.removeFromCart(product4);
+		cart.removeFromCart(product4);		
+		cart.removeFromCart(product4);
 
-		// // product 1
-		// assertTrue( cart.getItems().get(0).getQuantity() == 2 );
+		// product 1
+		assertTrue( cart.getItems().get(0).getQuantity() == 2 );
 	}
 
 
