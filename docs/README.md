@@ -8,7 +8,7 @@ O PiecePilot é o seu co-piloto na jornada de construir o computador perfeito. D
 
 ### Dependências
 
-1. Para executar a aplicação Front-end é necessário [instalar o node](https://nodejs.org/en/download).
+1. Para executar a aplicação Front-end é necessário ter instalado o [Node.js](https://nodejs.org/en/download).
 2. Dentro do diretório `frontend` instale as dependências do projeto executando `npm install`.
 
 ### Executando
