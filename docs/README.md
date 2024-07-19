@@ -1,4 +1,4 @@
-# PiecePilot
+# ✈️ PiecePilot
 
 O PiecePilot é o seu co-piloto na jornada de construir o computador perfeito. Destinado a vendedores de peças de computadores e entusiastas de tecnologia, este software intuitivo simplifica a seleção de peças e guia você na criação de sistemas de computador personalizados. Com um catálogo abrangente, cálculo automático de preços, histórico de pedidos e comunicação integrada, o PiecePilot torna a montagem de PCs mais fácil e eficiente do que nunca. Suba a bordo e leve a sua experiência de construção de PCs para novos patamares com o PiecePilot ao seu lado.
 
